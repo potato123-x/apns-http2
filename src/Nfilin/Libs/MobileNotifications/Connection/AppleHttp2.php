@@ -89,7 +89,7 @@ class AppleHttp2 extends Curl
             curl_setopt($this->curl, CURLOPT_POSTFIELDS, $data);
             curl_setopt($this->curl, CURLOPT_HTTPHEADER, $headers);
 
-            $results[] = rApnsHttp2::fromCurl($this->curl);
+            $results[] = [$receiver, rApnsHttp2::fromCurl($this->curl)];
 
             $this->close();
         }
