@@ -1,16 +1,16 @@
 <?php
-
-namespace Nfilin\Libs\MobileNotifications\Response;
+namespace Nfilin\Libs\ApnsHttp2;
 
 use Nfilin\Libs\BaseIterator;
 use Nfilin\Libs\MobileNotifications\Device\DeviceInterface;
 use Nfilin\Libs\MobileNotifications\Device\DeviceListInterface;
+use Nfilin\Libs\MobileNotifications\Response\ResponseInterface;
 
 /**
  * Class ApnsBatch
  * @package Nfilin\Libs\MobileNotifications\Response
  */
-class ApnsBatch extends BaseIterator implements ResponseInterface
+class Response extends BaseIterator implements ResponseInterface
 {
     /**
      * @param $value

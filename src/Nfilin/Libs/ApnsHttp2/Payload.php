@@ -1,11 +1,13 @@
 <?php
-namespace Nfilin\Libs\MobileNotifications\Payload;
+namespace Nfilin\Libs\ApnsHttp2;
+
+use Nfilin\Libs\MobileNotifications\Payload\Base as BasePayload;
 
 /**
- * Class Apns
- * @package Nfilin\Libs\MobileNotifications\Payload
+ * Class Payload
+ * @package Nfilin\Libs\ApnsHttp2
  */
-class Apns extends Base
+class Payload extends BasePayload
 {
     /**
      * @var int

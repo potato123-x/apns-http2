@@ -1,28 +1,27 @@
 <?php
 
-namespace Nfilin\Libs\MobileNotifications\Message;
+namespace Nfilin\Libs\ApnsHttp2;
 
-use Nfilin\Libs\MobileNotifications\Device\ApnsList as dApnsList;
 use Nfilin\Libs\MobileNotifications\Device\DeviceListInterface;
-use Nfilin\Libs\MobileNotifications\Payload\Apns as pApns;
+use Nfilin\Libs\MobileNotifications\Message\Base as BaseMessage;
 use Nfilin\Libs\MobileNotifications\Payload\PayloadInterface;
 
 /**
- * Class ApnsHttp2
+ * Class Message
+ * @package Nfilin\Libs\ApnsHttp2
  * @property string topic
- * @package Nfilin\Libs\MobileNotifications\Message
  */
-class ApnsHttp2 extends Base
+class Message extends BaseMessage
 {
     /**
      * ApnsHttp2 constructor.
-     * @param dApnsList|DeviceListInterface $receivers
-     * @param pApns|PayloadInterface|null $payload
+     * @param DeviceList|DeviceListInterface $receivers
+     * @param Payload|PayloadInterface|null $payload
      * @throws \Exception
      */
     public function __construct(DeviceListInterface $receivers, PayloadInterface $payload = null)
     {
-        if (!$receivers instanceof dApnsList) {
+        if (!$receivers instanceof DeviceList) {
             throw new \Exception('Only APNS devices allowed for APNS HTTP/2 message');
         }
         parent::__construct($receivers, $payload);
@@ -33,7 +32,7 @@ class ApnsHttp2 extends Base
      */
     public function jsonSerialize()
     {
-        $ret = pApns::wrap($this->payload)->jsonSerialize();
+        $ret = Payload::wrap($this->payload)->jsonSerialize();
         $ret['content-available'] = $this->content_available;
         return ['aps' => $ret];
     }
@@ -44,5 +43,13 @@ class ApnsHttp2 extends Base
     public function getTopic()
     {
         return $this->restricted_package_name;
+    }
+
+    /**
+     * @param $value
+     */
+    public function setTopic($value)
+    {
+        $this->restricted_package_name = $value;
     }
 }

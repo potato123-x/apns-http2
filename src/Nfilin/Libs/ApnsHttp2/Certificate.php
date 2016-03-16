@@ -1,12 +1,11 @@
 <?php
-
-namespace Nfilin\Libs\MobileNotifications\Authorization;
+namespace Nfilin\Libs\ApnsHttp2;
 
 /**
- * Class Apns
- * @package Nfilin\Libs\MobileNotifications\Authorization
+ * Class Certificate
+ * @package Nfilin\Libs\ApnsHttp2
  */
-class Apns implements AuthorizationInterface
+class Certificate implements AuthorizationInterface
 {
     /**
      * @var string

@@ -1,19 +1,21 @@
 <?php
+namespace Nfilin\Libs\ApnsHttp2;
 
-namespace Nfilin\Libs\MobileNotifications\Device;
+use Nfilin\Libs\MobileNotifications\Device\Device as BaseDevice;
+use Nfilin\Libs\MobileNotifications\Device\DeviceInterface;
 
 /**
- * Class Apns
- * @package Nfilin\Libs\MobileNotifications\Device
+ * Class Device
+ * @package Nfilin\Libs\ApnsHttp2 *
  * @property string|null path
  */
-class Apns extends Device
+class Device extends BaseDevice
 {
     public $type = self::TYPE_APNS;
 
     /**
      * Apns constructor.
-     * @param array|Device|string $token
+     * @param array|DeviceInterface|string $token
      * @param string $type
      */
     public function __construct($token, $type = self::TYPE_APNS)

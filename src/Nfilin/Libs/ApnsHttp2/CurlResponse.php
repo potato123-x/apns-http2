@@ -1,12 +1,13 @@
 <?php
+namespace Nfilin\Libs\ApnsHttp2;
 
-namespace Nfilin\Libs\MobileNotifications\Response;
+use Nfilin\Libs\MobileNotifications\Response\Curl as BaseCurlResponse;
 
 /**
  * Class ApnsHttp2
  * @package Nfilin\Libs\MobileNotifications\Response
  */
-class ApnsHttp2Single extends Curl
+class CurlResponse extends BaseCurlResponse
 {
     /**
      * @var string
@@ -19,7 +20,7 @@ class ApnsHttp2Single extends Curl
 
     /**
      * @param resource $ch
-     * @return static|Curl
+     * @return CurlResponse
      */
     public static function fromCurl($ch)
     {
