@@ -1,6 +1,8 @@
 <?php
 namespace Nfilin\Libs\ApnsHttp2;
 
+use Nfilin\Libs\MobileNotifications\Authorization\AuthorizationInterface;
+
 /**
  * Class Certificate
  * @package Nfilin\Libs\ApnsHttp2

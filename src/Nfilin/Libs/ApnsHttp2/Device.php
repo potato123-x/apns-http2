@@ -1,7 +1,7 @@
 <?php
 namespace Nfilin\Libs\ApnsHttp2;
 
-use Nfilin\Libs\MobileNotifications\Device\Device as BaseDevice;
+use Nfilin\Libs\MobileNotifications\Device\Base as BaseDevice;
 use Nfilin\Libs\MobileNotifications\Device\DeviceInterface;
 
 /**

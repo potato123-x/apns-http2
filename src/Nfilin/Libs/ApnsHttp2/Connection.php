@@ -1,6 +1,7 @@
 <?php
 namespace Nfilin\Libs\ApnsHttp2;
 
+use Nfilin\Libs\MobileNotifications\Authorization\AuthorizationInterface;
 use Nfilin\Libs\MobileNotifications\Connection\Curl as CurlConnection;
 use Nfilin\Libs\MobileNotifications\Message\MessageInterface;
 
