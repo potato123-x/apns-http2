@@ -1,0 +1,24 @@
+{
+  "name": "nfilin/apns-http2",
+  "homepage": "https://github.com/nfilin/apns-http2",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Stanislav Markovskyi",
+      "email": "samarkowski@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "nfilin/mobile-notifications": "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "Nfilin\\Libs": "src/"
+    }
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "dev"
+}
