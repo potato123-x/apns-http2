@@ -5,6 +5,7 @@
 
 Usage example:
 ```php
+<?php
     use Nfilin\Libs\ApnsHttp2 as Apns;
 
     /* Create APNS certificate */
@@ -33,6 +34,9 @@ Usage example:
 
     /* Sign message with topic valid for selected receivers */
     $message->topic = 'some.example.app';
+
+    /* Set expire time in seconds from current time */
+    $message->time_to_live = 3600; // One hour after been sent
 
     /* Send notifications and get responses */
     $response = $connection->send($message);
