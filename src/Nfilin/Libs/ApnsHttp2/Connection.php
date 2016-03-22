@@ -67,7 +67,7 @@ class Connection extends CurlConnection
     public function send(MessageInterface $message)
     {
         if (!($message instanceof Message)) {
-            throw new \Exception("Receivers should be list od APNS devices");
+            throw new \Exception("Receivers should be list of APNS devices");
         }
         /** @var Message $message */
         $receivers = $message->receivers;
