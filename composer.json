@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=5.4",
-    "nfilin/mobile-notifications": "^1.0"
+    "nfilin/mobile-notifications": "*"
   },
   "autoload": {
     "psr-0": {
